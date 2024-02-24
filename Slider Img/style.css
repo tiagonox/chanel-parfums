@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap'); /* Importa a fonte Oswald do Google Fonts */
+
+h1 {
+  font-size: 35px; /* Define o tamanho da fonte */
+  font-family: "Oswald"; /* Define a fonte do título como Oswald */
+  color: #fff; /* Define a cor do texto como branco */
+}
+
+body {
+  background: linear-gradient(to right, rgb(15, 21, 23), rgb(20, 59, 97)); /* Define um plano de fundo gradient */
+}
+
+.container {
+    padding: 12rem; /* Adiciona um preenchimento ao redor do contêiner */
+}
+
+.slider-wrepper {
+    position: static; /* Define a posição como estática para o envoltório do slider */
+    max-width: 48rem; /* Define a largura máxima do envoltório do slider */
+    margin: 0 auto; /* Centraliza o envoltório do slider horizontalmente */
+}
+
+.slider {
+    display: flex; /* Define o container do slider como flexível */
+    aspect-ratio: 16 / 9; /* Define a proporção de aspecto das imagens do slider */
+    overflow-x: auto; /* Permite rolagem horizontal do slider */
+    scroll-snap-type: x mandatory; /* Define o tipo de rolagem snap horizontal obrigatório */
+    scroll-behavior: smooth; /* Adiciona uma rolagem suave ao slider */
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25); /* Adiciona uma sombra ao slider */
+}
+
+.slider img {
+   flex: 1 0 100%; /* Define as imagens para ocupar todo o espaço disponível */
+   scroll-snap-align: start; /* Define a posição de snap das imagens como início */
+   object-fit: cover; /* Faz com que as imagens cubram todo o espaço do contêiner mantendo a proporção */
+}
+
+.slider-nav {
+    display: flex; /* Define a navegação do slider como flexível */
+    column-gap: 1rem; /* Define o espaço entre as colunas como 1 unidade de medida */
+    position: absolute; /* Define a posição como absoluta para a navegação do slider */
+    bottom: 1.25rem; /* Define a distância do fundo como 1.25 unidades de medida */
+    left: 50%; /* Define a distância da esquerda como 50% */
+    transform: translateX(-50%); /* Centraliza a navegação horizontalmente */
+    z-index: 1; /* Define a ordem de empilhamento do elemento */
+}
+
+.slider-nav a {
+    width: 0.5rem; /* Define a largura dos botões de navegação */
+    height: 0.5rem; /* Define a altura dos botões de navegação */
+    border-radius: 50%; /* Define a forma dos botões de navegação como círculos */
+    background-color: #fff; /* Define a cor de fundo dos botões de navegação como branco */
+    opacity: 0.75; /* Define a opacidade dos botões de navegação */
+    transition: opacity ease 250ms; /* Adiciona uma transição suave à opacidade dos botões de navegação */
+}
+
+.slider-nav a:hover {
+    opacity: 1; /* Define a opacidade dos botões de navegação quando hover como 1 */
+}
